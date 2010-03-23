@@ -809,6 +809,15 @@
 			// Add node change handlers
 			Event.add(t.getDoc(), 'mouseup', t.nodeChanged, t);
 			Event.add(t.getDoc(), 'keyup', t.nodeChanged, t );
+			
+			// Add save on blur capabilities on browsers which support it
+			if (isGecko) {
+				Event.add(t.getDoc(), "blur", t.save, t);
+			} else if (isWebKit) {
+				Event.add(t.getDoc(), "DOMFocusOut", t.save, t);
+			} else if (isIE) {
+				Event.add(t.getDoc(), "deactivate", t.save, t);
+			}
 
 			// Add focus event
 			Event.add(isGecko ? t.getDoc() : t.getWin(), 'focus', function(e) {

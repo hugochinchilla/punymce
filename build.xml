@@ -48,6 +48,7 @@
 			<fileset dir="js" includes="punymce/plugins/protect_src.js" />
 			<fileset dir="js" includes="punymce/plugins/tabfocus_src.js" />
 			<fileset dir="js" includes="punymce/plugins/safari2x_src.js" />
+			<fileset dir="js" includes="punymce/plugins/textile_src.js" />
 		</concat>
 
 		<!-- Compress PunyMCE full and base using the YUI Compressor -->
@@ -67,6 +68,7 @@
 		<yuicompress infile="js/punymce/plugins/protect_src.js" outfile="js/punymce/plugins/protect.js" />
 		<yuicompress infile="js/punymce/plugins/tabfocus_src.js" outfile="js/punymce/plugins/tabfocus.js" />
 		<yuicompress infile="js/punymce/plugins/safari2x_src.js" outfile="js/punymce/plugins/safari2x.js" />
+		<yuicompress infile="js/punymce/plugins/textile_src.js" outfile="js/punymce/plugins/textile.js" />
 
 		<delete file="js/punymce/puny_mce.full.tmp.js" quiet="true" />
 	</target>
